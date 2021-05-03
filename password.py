@@ -5,7 +5,7 @@ import time
 # time is just for fun
 
 while True:
-    password_length = int(input("Enter password length between 8 and 24 characters:"))
+    password_length = int(input("Enter password length between 8 and 24 characters: "))
     # a prompt and input asking the user to pick
     characters = string.ascii_letters + string.digits + string.punctuation
     # string module constants put together for possible chars in a password string
@@ -19,9 +19,11 @@ while True:
     else:
         password = []
         # empty password, but defined as variable
+        print('\n')
         for x in range(password_length):
                 password.append(random.choice(characters))
         print(''.join(password))
+        print('\n')
         # checks for required length and creates password
         time.sleep(.25)
          # waits to make next message more obvious
